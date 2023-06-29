@@ -69,6 +69,15 @@ header > img{
     margin: auto;
 }
 
+.cultos > h1{
+    font-size: 4.2em;
+    text-align: center;
+    padding: 80px 0px;
+    color: var(--cor5);
+    font-family: var(--fontetitulo);
+    font-weight: 700;
+}
+
 .dias > div{
     display: inline-block;
     text-align: center;
@@ -100,7 +109,7 @@ header > img{
 .doacao > h1{
     font-size: 4.2em;
     text-align: center;
-    padding: 80px;
+    padding: 80px 0px;
     color: var(--cor5);
     font-family: var(--fontetitulo);
     font-weight: 700;
