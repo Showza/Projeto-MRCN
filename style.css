@@ -24,6 +24,7 @@
 
 body{
     background-color: var(--cor1);
+    overflow-x: hidden;
 }
 
 main {
@@ -31,7 +32,7 @@ main {
     display: block;
     margin: auto;
     background-color: white;
-    line-height: 1.5em;
+    line-height: 1.6em;
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.4);
     text-shadow: -1px 1px 1px rgba(0, 0, 0, 0.1);
 }
@@ -48,7 +49,7 @@ header > img{
 .sobre_nos > h1{
     font-size: 4.2em;
     text-align: center;
-    padding: 80px 100px 100px 100px;
+    padding: 80px 0px;
     color: var(--cor5);
     font-family: var(--fontetitulo);
     font-weight: 700;
@@ -62,49 +63,38 @@ header > img{
     padding: 0px 30px;
 }
 
-.cultos > h1{
-    font-size: 4.2em;
-    text-align: center;
-    padding: 100px;
-    color: var(--cor5);
-    font-family: var(--fontetitulo);
-    font-weight: 700;
-}
-
-.cultos ul{
-    display: block;
-    margin: auto;
+.cultos{
     width: fit-content;
-    columns: 4;
-    column-gap: 30px;
     text-align: center;
+    margin: auto;
 }
 
-.cultos p{
+.dias > div{
+    display: inline-block;
+    text-align: center;
+    padding: 40px;
+}
+
+.dias h1{
     font-size: 2em;
     font-weight: 500;
     padding: 20px 40px;
     color: var(--cor5);
     background-color: var(--cor2);
     border-radius: 5px 5px 0px 0px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
 }
 
-.cultos li{
+.dias p{
     font-size: 1.2em;
     font-weight: 500;
     padding: 20px;
-    list-style: inside;
     border-radius: 0px 0px 10px 10px;
-}
-
-.dias{
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
-    border-radius: 5px 5px 10px 10px;
 }
 
-.dias:hover{
-    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
-    transition: .5s;
+.dias_resp{
+    width: 200px;
 }
 
 .doacao > h1{
@@ -159,13 +149,17 @@ header > img{
     border-radius: 10px;
 }
 
-.eventos > h1{
+#curso_evento > h1{
+    display: inline;
     font-size: 4.2em;
-    text-align: center;
-    padding: 100px;
     color: var(--cor5);
     font-family: var(--fontetitulo);
     font-weight: 700;
+}
+
+#curso_evento{
+    text-align: center;
+    padding: 80px 0px;
 }
 
 .eventos ul{
@@ -179,31 +173,20 @@ header > img{
 }
 
 .cards{
-    max-width: 300px;
-    margin: auto;
-    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.4);
-    padding-bottom: 15px;
-}
-
-.cards:hover{
-    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.6);
-    transition: .5s;
+    text-align: center;
 }
 
 .cards h1{
-    text-align: center;
     padding-top: 10px;
     color: var(--cor5);
 }
 
 .cards p{
     text-align: justify;
-    max-width: 275px;
     margin: 10px 15px 20px 15px;
     text-indent: 20px;
     font-size: 1.1em;
     color: gray;
-    padding: 10px 20px 20px 10px;
 }
 
 .cards a{
@@ -211,6 +194,7 @@ header > img{
     display: block;
     width: fit-content;
     margin: auto;
+    padding: 10px;
 }
 
 .cards button{
@@ -228,12 +212,36 @@ header > img{
     transition: .5s;
     background-color: black;
     color: white;
+} 
+
+#card_1, #card_2, #card_3{
+    display: inline-block;
+    max-width: 275px;
+    margin: 0px 40px;
+    text-align: center;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.4);
+    margin-bottom: 50px;
+}
+
+#card_1:hover{
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.6);
+    transition: .5s;
+}
+
+#card_2:hover{
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.6);
+    transition: .5s;
+}
+
+#card_3:hover{
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.6);
+    transition: .5s;
 }
 
 .local h1{
     font-size: 4.2em;
     text-align: center;
-    padding-top: 100px;
+    padding-top: 80px;
     padding-bottom: 35px;
     color: var(--cor5);
     font-family: var(--fontetitulo);
@@ -259,51 +267,63 @@ header > img{
     transition: .5s;
 }
 
-.acompanhe{
-    display: inline-block;
-    text-align: center;
-    padding-left: 250px;
+footer{
+    width: 100%;
 }
 
-.acompanhe > h1{
+.rodape{
+    text-align: center;
+}
+
+.acompanhe{
+    display: inline-block;
+    width: 40%;
+    padding-bottom: 20px;
+}
+
+#icones{
+    text-align: center;
+}
+
+#icones > h1{
     padding-bottom: 25px;
 }
 
-.acompanhe > a{
-    display: inline-block;
+#icones img{
     width: 40px;
     height: 40px;
-    margin: 5px 15px 0px 15px;
+    margin: 5px 8px 0px 8px;
+    filter: grayscale(1);
 }
 
-.links{
+#icones > a > img:hover{
+    filter: none;
+}
+
+.acesso_rapido{
     display: inline-block;
-    list-style: none;
-    text-align: center;
-    padding-left: 290px;
-    margin-top: 10px;
+    width: 40%;
 }
 
-.links > h1{
+#links{
+    display: inline-block;
+    text-align: center;
+}
+
+#links h1{
     padding-bottom: 7px;
 }
 
-.links > li > a{
+#links a{
+    display: block;
     text-decoration: none;
     color: black;
+    width: fit-content;
+    margin: auto;
 }
 
-.links > li > a:hover{
+#links a:hover{
     color: var(--cor6);
-}
-
-.icone{
-    filter: grayscale(1);
-    width: 40px;
-}
-
-.icone:hover{
-    filter: none;
 }
 
 footer > p{
